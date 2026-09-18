@@ -11,241 +11,276 @@
             box-sizing: border-box;
         }
 
-        html, body {
-            font-family: 'Segoe UI', Georgia, serif;
-            background: linear-gradient(135deg, #f5ede3 0%, #faf6f0 50%, #f9f3eb 100%);
-            color: #3d3d3d;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.7;
-            min-height: 100vh;
+            color: #6b5d52;
+            background: #f5f1ed;
+            padding: 20px;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 30px 20px;
+            background: #fefdf9;
+            padding: 60px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
 
-        header {
+        .header {
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #c9a876;
+            margin-bottom: 50px;
         }
 
-        .logo {
-            font-size: 32px;
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
             font-weight: 300;
-            letter-spacing: 3px;
-            color: #6b4423;
-            margin-bottom: 8px;
-            font-family: Georgia, serif;
-        }
-
-        .tagline {
-            font-size: 13px;
-            color: #8b6f47;
             letter-spacing: 2px;
-            font-weight: 500;
+            color: #8b7355;
+            font-family: 'Georgia', serif;
+        }
+
+        .header .instagram {
+            font-size: 1em;
+            color: #a89a8e;
             margin-bottom: 25px;
+            font-weight: 300;
         }
 
-        h1 {
-            font-size: 24px;
-            color: #6b4423;
-            margin-bottom: 10px;
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #6b5d52;
+            margin-bottom: 8px;
             font-weight: 500;
-            letter-spacing: 0.5px;
         }
 
-        .subtitle {
-            color: #8b6f47;
-            font-size: 13px;
-            font-weight: 400;
+        .header .subsubtitle {
+            font-size: 0.95em;
+            color: #9d8d7e;
+            font-weight: 300;
         }
 
-        .section {
-            background: white;
-            border: 1px solid #d9c39a;
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        .divider {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #c4b5a0, transparent);
+            margin: 40px 0;
         }
 
-        .section h2 {
-            font-size: 13px;
-            color: #6b4423;
+        .section-box {
+            border: 2px solid #d4c5b9;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            background: #fffbf7;
+            position: relative;
+        }
+
+        .section-box::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #c4b5a0, #e8ddd2);
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-radius: 12px 0 0 12px;
+        }
+
+        .section-title {
+            font-size: 1.3em;
+            color: #6b5d52;
             margin-bottom: 20px;
             font-weight: 600;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            text-align: center;
         }
 
-        .terms-box {
-            background: linear-gradient(135deg, #fffbf7 0%, #fef9f3 100%);
-            border-right: 3px solid #c9a876;
-            padding: 18px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-        }
-
-        .terms-box ul {
+        .checklist {
             list-style: none;
         }
 
-        .terms-box li {
-            padding: 8px 0;
-            font-size: 13px;
-            color: #555;
-            line-height: 1.6;
+        .checklist li {
+            margin-bottom: 15px;
+            padding-right: 30px;
+            color: #6b5d52;
+            font-size: 0.98em;
+            line-height: 1.8;
         }
 
-        .terms-box li:before {
-            content: "✓ ";
-            color: #8b6f47;
+        .checklist li:before {
+            content: '✓';
+            color: #c4b5a0;
             font-weight: bold;
-            margin-left: 8px;
+            font-size: 1.2em;
+            margin-right: 15px;
         }
 
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+        h2 {
+            font-size: 1.25em;
+            margin-top: 35px;
+            margin-bottom: 18px;
+            color: #6b5d52;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.05em;
+            margin-top: 18px;
+            margin-bottom: 12px;
+            color: #7a6c62;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #6b5d52;
+            font-size: 0.98em;
+            line-height: 1.7;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: #6b5d52;
+            font-size: 0.98em;
+            line-height: 1.7;
+        }
+
+        .section-box div {
             margin-bottom: 20px;
         }
 
-        @media (max-width: 600px) {
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
+        .section-box div:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-box strong {
+            display: block;
+            margin-bottom: 10px;
+            color: #6b5d52;
+        }
+
+        .section-box p {
+            margin-bottom: 0;
+            color: #6b5d52;
+        }
+
+        .section-box div:nth-child(2) strong {
+            color: #c41e3a;
+        }
+
+        .section-box div:nth-child(2) p {
+            color: #8b4513;
+        }
+
+        .form-section {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 2px solid #e8ddd2;
+        }
+
+        .form-section h2 {
+            margin-top: 0;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .form-group {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
-        label {
-            font-size: 12px;
-            font-weight: 600;
-            color: #6b4423;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        input[type="text"],
-        input[type="date"],
-        input[type="time"],
-        input[type="email"] {
-            padding: 12px;
-            border: 1px solid #d9c39a;
-            border-radius: 6px;
-            font-size: 13px;
-            background: #faf8f4;
-            color: #3d3d3d;
-            font-family: 'Segoe UI', sans-serif;
-            text-align: right;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #8b6f47;
-            background: white;
-            box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1);
-        }
-
-        .roles-label {
-            font-size: 12px;
-            font-weight: 600;
-            color: #6b4423;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        .form-group label {
             display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #6b5d52;
+            font-size: 0.98em;
         }
 
-        .roles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 12px;
-            margin-bottom: 25px;
+        .required {
+            color: #c4445c;
         }
 
-        .role-btn {
-            padding: 14px;
-            border: 2px solid #d9c39a;
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="date"],
+        .form-group input[type="time"],
+        .form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d4c5b9;
             border-radius: 6px;
-            background: white;
-            cursor: pointer;
-            font-weight: 500;
-            font-size: 13px;
-            color: #6b4423;
-            transition: all 0.25s ease;
-            text-align: center;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .role-btn:hover {
-            border-color: #8b6f47;
-            background: #faf8f4;
-        }
-
-        .role-btn.active {
-            background: #6b4423;
-            color: white;
-            border-color: #6b4423;
-            box-shadow: 0 4px 12px rgba(107, 68, 35, 0.2);
-        }
-
-        .consent-box {
+            font-size: 0.98em;
+            font-family: inherit;
+            color: #6b5d52;
             background: #fffbf7;
-            border: 1px solid #d9c39a;
-            padding: 18px;
-            border-radius: 6px;
-            margin-bottom: 20px;
         }
 
-        .consent-box label {
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #c4b5a0;
+            box-shadow: 0 0 0 3px rgba(196, 181, 160, 0.1);
+            background: #fffdf9;
+        }
+
+        .checkbox-label {
             display: flex;
             align-items: flex-start;
-            gap: 12px;
-            margin: 0;
-            font-weight: 400;
-            text-transform: none;
-            font-size: 13px;
-            color: #555;
+            margin-bottom: 14px;
             cursor: pointer;
+            font-weight: 400;
+            color: #6b5d52;
+            font-size: 0.98em;
+            line-height: 1.6;
         }
 
-        .consent-box input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            margin-top: 3px;
+        .checkbox-label input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-left: 12px;
+            margin-top: 2px;
             cursor: pointer;
-            accent-color: #8b6f47;
             flex-shrink: 0;
+            accent-color: #8b7355;
+        }
+
+        .agreement-statement {
+            background: #fffbf7;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e8ddd2;
+            margin-bottom: 20px;
+            color: #6b5d52;
+            font-size: 0.98em;
+            line-height: 1.8;
         }
 
         .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background: #6b4423;
-            color: white;
+            background: #6b5d52;
+            color: #fffdf9;
+            padding: 14px 40px;
             border: none;
             border-radius: 6px;
+            font-size: 1em;
             font-weight: 600;
-            font-size: 14px;
             cursor: pointer;
-            letter-spacing: 1px;
+            width: 100%;
+            margin-top: 25px;
             transition: all 0.3s ease;
-            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .submit-btn:hover:not(:disabled) {
-            background: #5a3a1c;
-            box-shadow: 0 6px 16px rgba(107, 68, 35, 0.25);
+            background: #7a6c62;
+            box-shadow: 0 4px 12px rgba(107, 93, 82, 0.2);
         }
 
         .submit-btn:disabled {
@@ -255,174 +290,304 @@
 
         .success-message {
             display: none;
-            background: #d4edda;
-            border: 1px solid #c3e6cb;
-            color: #155724;
-            padding: 15px;
-            border-radius: 6px;
-            margin-bottom: 20px;
+            background: #fffbf7;
+            color: #6b5d52;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 2px solid #d4c5b9;
             text-align: center;
-            font-weight: 500;
         }
 
         .success-message.show {
             display: block;
         }
 
-        footer {
-            text-align: center;
-            color: #999;
-            font-size: 11px;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #d9c39a;
+        .success-message strong {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+            color: #6b5d52;
         }
 
-        .required {
-            color: #8b6f47;
+        .success-message div {
+            font-size: 0.95em;
+            line-height: 1.8;
+            color: #7a6c62;
+        }
+
+        .footer {
+            text-align: center;
+            color: #9d8d7e;
+            font-size: 0.9em;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #e8ddd2;
+        }
+
+        .footer strong {
+            color: #6b5d52;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+                letter-spacing: 1px;
+            }
+
+            .section-box {
+                padding: 25px;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="logo">Kayan Photography</div>
-            <div class="tagline">@kayan.ty</div>
-            <h1>اتفاقية تعاون فني</h1>
-            <p class="subtitle">Time For Print — عقد تعاون بين أطراف الجلسة</p>
-        </header>
+        <!-- Header -->
+        <div class="header">
+            <h1>Kayan Photography</h1>
+            <p class="instagram">kayan.ty@</p>
+            <p class="subtitle">اتفاقية تعاون فني</p>
+            <p class="subsubtitle">Time For Print — عقد تعاون بين أطراف الجلسة</p>
+        </div>
 
-        <div class="section">
-            <h2>شروط الاتفاقية</h2>
-            <div class="terms-box">
-                <ul>
-                    <li>تعاون بدون مقابل مادي — كل طرف يقدم خدماته مقابل الحصول على نسخ من الصور</li>
-                    <li>حق استخدام الصور في حسابات كل طرف الشخصي والمهني</li>
-                    <li>توثيق إلزامي: ذكر جميع الأطراف المشاركين عند أي نشر</li>
-                    <li>منع نسب العمل لغير أصحابه — حماية حقوق جميع الأطراف</li>
-                    <li>الملكية الفكرية: الملفات الأصلية والحقوق الكاملة للمصورة فقط</li>
-                </ul>
+        <div class="divider"></div>
+
+        <!-- Conditions Section -->
+        <div class="section-box">
+            <h2 class="section-title">شروط الاتفاقية</h2>
+
+            <ul class="checklist">
+                <li><strong>تعاون بدون مقابل مادي</strong> — كل طرف يقدم خدماته مقابل الحصول على نسخ من الصور</li>
+                <li><strong>حق استخدام الصور</strong> في حسابات كل طرف الشخصي والمهني</li>
+                <li><strong>توثيق إلزامي:</strong> ذكر جميع الأطراف المشاركين عند أي نشر</li>
+                <li><strong>منع نسب العمل</strong> لغير أصحابه — حماية حقوق جميع الأطراف</li>
+                <li><strong>الملكية الفكرية:</strong> الملفات الأصلية والحقوق الكاملة للمصورة فقط</li>
+            </ul>
+        </div>
+
+        <!-- Legal Notice Section -->
+        <h2>مسؤولية البيانات والموافقة</h2>
+
+        <div class="section-box">
+            <h3 style="text-align: center; margin-top: 0;">صحة المعلومات والاحتيال</h3>
+            
+            <div>
+                <strong>✓ صحة المعلومات:</strong>
+                <p>أنتِ مسؤولة بالكامل عن صحة البيانات التي تدخلينها. لا يمكنك الرجوع بعدين وتقول "معلوماتي غلط" أو "ما وافقت"</p>
+            </div>
+
+            <div>
+                <strong>⚠️ الاحتيال وانتحال الشخصية:</strong>
+                <p>إدخال بيانات شخص آخر بقصد الاحتيال أو الانتحال جريمة قانونية. التوقيع على هذه الاتفاقية ببيانات مزيّفة يعرّضك للمسؤولية القانونية الكاملة.</p>
             </div>
         </div>
 
-        <form method="POST" action="https://formspree.io/f/xzdnajvq" class="section">
+        <h3>بند التعاون بدون مقابل:</h3>
+        <p>
+            التعاون في هذه الجلسة هو تعاون بدون مقابل مادي للمصورة (Kayan) فقط. أما بين الأطراف الأخرى (موديل، مصورة مساعدة، مكياج، تصفيف شعر، بوتيك)، فهذا شأنهم الخاص وليس للمصورة دخل به.
+        </p>
+
+        <h3>التصحيح قبل الجلسة:</h3>
+        <ul>
+            <li>إذا اكتشفتِ خطأ في البيانات قبل الجلسة، تواصلي عبر البريد الإلكتروني لتصحيحه</li>
+            <li>التصحيح لازم يتم قبل بدء الجلسة مباشرة</li>
+            <li><strong>بعد بدء الجلسة: لا يمكن تصحيح أي بيانات</strong></li>
+        </ul>
+
+        <h3>الموافقة والتوقيع:</h3>
+        <p>بضغطك على "أوقّع الاتفاقية":</p>
+        <ul>
+            <li>✓ أنتِ توافقين على جميع الشروط بدون استثناء</li>
+            <li>✓ هذا التوقيع ملزم قانونياً</li>
+            <li>✓ لا يمكنك الرجوع بعدين</li>
+            <li>✓ البيانات المسجلة تبقى نهائية</li>
+        </ul>
+
+        <!-- Form Section -->
+        <div class="form-section">
             <h2>بيانات الجلسة والموافقة</h2>
 
-            <div id="successMsg" class="success-message">
-                ✓ تم استقبال موافقتك بنجاح. شكراً لتعاونك!
-            </div>
+            <p style="text-align: center; color: #9d8d7e; margin-bottom: 30px;">✓ تم استقبال موافقتك بنجاح. شكراً لتعاونك!</p>
 
-            <div class="form-grid">
+            <form id="agreementForm" onsubmit="handleSubmit(event)">
                 <div class="form-group">
                     <label for="sessionDate">تاريخ الجلسة <span class="required">*</span></label>
                     <input type="date" id="sessionDate" name="sessionDate" required>
                 </div>
+
                 <div class="form-group">
                     <label for="sessionTime">وقت الجلسة <span class="required">*</span></label>
                     <input type="time" id="sessionTime" name="sessionTime" required>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label for="sessionLocation">موقع التصوير <span class="required">*</span></label>
-                <input type="text" id="sessionLocation" name="sessionLocation" placeholder="اكتبي موقع الجلسة" required>
-            </div>
+                <div class="form-group">
+                    <label for="location">موقع التصوير <span class="required">*</span></label>
+                    <input type="text" id="location" name="location" placeholder="موقع أو عنوان الجلسة" required>
+                </div>
 
-            <div class="form-group">
-                <label for="participantName">اسمك الكامل <span class="required">*</span></label>
-                <input type="text" id="participantName" name="participantName" placeholder="اكتبي اسمك كاملاً" required>
-            </div>
+                <div class="form-group">
+                    <label for="fullName">اسمك الكامل <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" placeholder="أدخلي اسمك الكامل" required>
+                </div>
 
-            <div class="form-group">
-                <label for="participantEmail">بريدك الإلكتروني <span class="required">*</span></label>
-                <input type="email" id="participantEmail" name="participantEmail" placeholder="your@email.com" required>
-            </div>
+                <div class="form-group">
+                    <label for="email">بريدك الإلكتروني <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </div>
 
-            <label class="roles-label">اختاري دورك في الجلسة <span class="required">*</span></label>
-            <div class="roles-grid">
-                <button type="button" class="role-btn" data-role="model">موديل</button>
-                <button type="button" class="role-btn" data-role="assistant">مساعدة مصورة</button>
-                <button type="button" class="role-btn" data-role="makeup">ميك أب أرتست</button>
-                <button type="button" class="role-btn" data-role="boutique">بوتيك</button>
-                <button type="button" class="role-btn" data-role="hair">هير ستايل</button>
-            </div>
-            <input type="hidden" id="selectedRole" name="selectedRole" required>
+                <div class="form-group">
+                    <label for="phone">رقم جوالك <span class="required">*</span></label>
+                    <input type="text" id="phone" name="phone" placeholder="+966501234567" required>
+                </div>
 
-            <div class="consent-box">
-                <label>
-                    <input type="checkbox" id="consentCheckbox" name="consent" required>
-                    <span>أقرّ بأنني قرأت وفهمت بنود اتفاقية التعاون أعلاه، وأوافق على استخدام صوري في نتاج هذه الجلسة وذكري عند أي نشر، وأعترف بحقوق المصورة والأطراف الأخرى</span>
+                <div class="form-group">
+                    <label for="role">اختاري دورك في الجلسة <span class="required">*</span></label>
+                    <select id="role" name="role" required>
+                        <option value="">-- اختري --</option>
+                        <option value="موديل">موديل</option>
+                        <option value="مساعدة مصورة">مساعدة مصورة</option>
+                        <option value="ميك أب أرتست">ميك أب أرتست</option>
+                        <option value="بوتيك">بوتيك</option>
+                        <option value="هير ستايل">هير ستايل</option>
+                    </select>
+                </div>
+
+                <div class="agreement-statement">
+                    أقرّ بأنني قرأت وفهمت بنود اتفاقية التعاون أعلاه، وأوافق على استخدام صوري في نتاج هذه الجلسة وذكري عند أي نشر، وأعترف بحقوق المصورة والأطراف الأخرى <span class="required">*</span>
+                </div>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="agreeAll" name="agreeAll" required>
+                    <span>أوافق على جميع الشروط أعلاه</span>
                 </label>
+
+                <button type="submit" class="submit-btn" id="submitBtn">أوقّع الاتفاقية</button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <strong>✓ تم استقبال موافقتك بنجاح. شكراً لتعاونك!</strong>
+                <div id="successDetails"></div>
             </div>
+        </div>
 
-            <button type="submit" class="submit-btn" id="submitBtn" disabled>أوقّع الاتفاقية</button>
-        </form>
-
-        <footer>
-            <p>Kayan Photography © 2026</p>
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>Kayan Photography © 2026</strong></p>
             <p>وثيقة موثوقة تحفظ حقوق جميع الأطراف المشاركين</p>
-        </footer>
+        </div>
     </div>
 
+    <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
     <script>
-        const roleButtons = document.querySelectorAll('.role-btn');
-        const selectedRoleInput = document.getElementById('selectedRole');
-        const consentCheckbox = document.getElementById('consentCheckbox');
-        const submitBtn = document.getElementById('submitBtn');
-        const form = document.querySelector('form');
-        const successMsg = document.getElementById('successMsg');
-        const participantName = document.getElementById('participantName');
-        const participantEmail = document.getElementById('participantEmail');
-        const sessionDate = document.getElementById('sessionDate');
+        // EmailJS Configuration
+        emailjs.init("0jry7wbkWinVrEloB");
 
-        // Set today's date as default
-        const today = new Date().toISOString().split('T')[0];
-        sessionDate.value = today;
-
-        // Role selection
-        roleButtons.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                roleButtons.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                selectedRoleInput.value = this.dataset.role;
-                validateForm();
-            });
-        });
-
-        // Form validation
-        function validateForm() {
-            const name = participantName.value.trim();
-            const email = participantEmail.value.trim();
-            const role = selectedRoleInput.value;
-            const consent = consentCheckbox.checked;
-
-            if (name && email && role && consent) {
-                submitBtn.disabled = false;
-            } else {
-                submitBtn.disabled = true;
-            }
+        function generateContractId() {
+            const year = new Date().getFullYear();
+            const randomNum = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+            return `KAY-${year}-${randomNum}`;
         }
 
-        participantName.addEventListener('input', validateForm);
-        participantEmail.addEventListener('input', validateForm);
-        consentCheckbox.addEventListener('change', validateForm);
+        function sendConfirmationEmail(formData, contractId) {
+            const emailContent = `السلام عليكم ${formData.fullName} ✓
 
-        // Form submission
-        form.addEventListener('submit', function(e) {
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'جاري الإرسال...';
+شكراً لتوقيعك على اتفاقية التعاون!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 بيانات العقد:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+رقم العقد: ${contractId}
+التاريخ والوقت: ${formData.timestamp}
+البريد: ${formData.email}
+
+✓ البيانات المسجلة:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+الاسم: ${formData.fullName}
+الجوال: ${formData.phone}
+الدور: ${formData.role}
+تاريخ الجلسة: ${formData.sessionDate}
+وقت الجلسة: ${formData.sessionTime}
+الموقع: ${formData.location}
+
+⚠️ لاحظي:
+- تأكدي من دقة البيانات
+- إذا فيه خطأ، ردي على هذا البريد فوراً
+- بعد الجلسة ما تقدري تصححي أي بيانات
+
+تحياتي،
+Kayan Photography
+@kayan.ty
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`;
+
+            emailjs.send("service_meenqhh", "template_welcome", {
+                to_email: formData.email,
+                to_name: formData.fullName,
+                message: emailContent,
+                contract_id: contractId
+            }).then(function(response) {
+                console.log('Email sent:', response);
+            }).catch(function(error) {
+                console.log('Email error:', error);
+            });
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const contractId = generateContractId();
+            const formData = {
+                contractId: contractId,
+                timestamp: new Date().toLocaleString('ar-SA', { timeZone: 'Asia/Riyadh' }),
+                sessionDate: document.getElementById('sessionDate').value,
+                sessionTime: document.getElementById('sessionTime').value,
+                location: document.getElementById('location').value,
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                role: document.getElementById('role').value,
+                agreeAll: document.getElementById('agreeAll').checked
+            };
+
+            // Save locally
+            localStorage.setItem('kayan_agreement_' + contractId, JSON.stringify(formData));
+
+            // Send email
+            sendConfirmationEmail(formData, contractId);
+
+            // Show success message
+            document.getElementById('agreementForm').style.display = 'none';
+            
+            const successDetails = document.getElementById('successDetails');
+            successDetails.innerHTML = `
+                تم إرسال تأكيد إلى: <strong>${formData.email}</strong><br>
+                <strong>رقم العقد:</strong> ${contractId}<br>
+                <small style="color: #9d8d7e; margin-top: 10px; display: block;">احفظي البريد التأكيدي في مكان آمن</small>
+            `;
+            
+            document.getElementById('successMessage').classList.add('show');
+
+            console.log('Data saved:', formData);
+        }
+
+        const checkbox = document.getElementById('agreeAll');
+        const submitBtn = document.getElementById('submitBtn');
+
+        checkbox.addEventListener('change', () => {
+            submitBtn.disabled = !checkbox.checked;
         });
 
-        // Listen for successful submission
-        window.addEventListener('message', function(e) {
-            if (e.data && e.data.type === 'formspree.submit') {
-                successMsg.classList.add('show');
-                setTimeout(() => {
-                    successMsg.classList.remove('show');
-                }, 5000);
-            }
-        });
+        submitBtn.disabled = true;
     </script>
 </body>
 </html>
